@@ -1,0 +1,98 @@
+Conceitos essenciais do angular
+
+main.ts => AppModule === padrão
+
+AppModule => AppComponent
+
+AppComponent => vai chamar os demais components.
+
+Diretives tem 2
+
+Diritives attribute == Altera aparência e o comportamento de elemento 
+, componente ou outra diretiva.
+
+@Directive({
+	selector: '[appRed]'
+})
+
+Diritives Structural == Altera o layout adicionando e removendo elementos
+da DOM.
+	*ngIf="product"
+	*ngFor="let product of products"
+		{{product.name}}
+
+PropertyBinding = é a ligação entre a variavel do html com o ts, q é passada como
+propiedade na tag html
+	
+sintaxe = .html [dataSource]="products"
+sintaxe = .ts products: Product[];
+
+EventBinding = Ligar evento no component
+ .html <button (click)="createProduct()"></button>
+ .ts createProduct(): void{...}
+
+OneWayDataBinding == é uma alteração unidirecional do typescript para .html
+toda vez q mudar o valor da minha varialvel no .ts vai refletir no input. 
+
+TwoWayDataBinding == é uma alteração bidirecional do typescript para .html e 
+do .html para o .ts a variavel é controlada por ambos os lados.
+
+sintax = <input [(ngModel)]="nome"> .html
+sintax = nome: string .ts
+
+Angular Router
+Router Outlet é um component para fazer rotas
+sintax = 
+<a routerLink="/products">produtos</a>
+		          ||
+	            \/
+const routes: Routes =[{
+	path:"products",
+	component: ProductCrudComponent
+  }]
+              ||
+              \/
+
+	<mat-sidenav-content>
+		<router-outlet></router-outlet>
+	</mat-sidenav-content>
+
+Pipes == Um meio de formatar um double mustache, nele vc pode passar algum método.
+sintax = <p>o Vencimento é {{produto.vencimento | data}} </p>
+              <p>o Valor é {{product.price | currency: "BRL" }} </p>
+currency== moeda
+
+encadeamento de Pipes 
+sintax = <p>o Vencimento é {{produto.vencimento | date: "fullDate" | uppercase}} </p>
+
+ElementosAngular02
+
+Programação Reativa == rxjs
+
+Padrão Observer == padrao orientado a EVENTO.
+
+SUBJECT == quem tem a capacidade de monitorar quando o evento acontece.
+OBSERVER == é a pessoa q esta interessado no evento.
+Evento ==> SUBJECT ==> OBSERVER ==> Notifica os métodos
+namorado   porteiro    namorada      parabens
+
+Entendendo Observables
+
+callbacks ==> Promises ==> Observables == varios metodos
+
+ElementosAngular03
+
+O que são Services?
+Services == classes que tem como principal objetivo organizar e compartilhar
+métodos e dados entre outros componentes.
+
+Motivação Para o Service
+Fazer a comunicação entre componentes diferentes e separar a logica da pagina da logica de serviço
+COMPONENT#1                    SERVICES                   COMPONENT#2
+ HTML CSS                                                   HTML CSS
+	  TS={                                                    TS={
+lógica01 == butons                                        lógica01 == butons   
+logica02 ==	serviços  =>			logica02 ==	serviços		<=   	logica02 ==	serviços
+logica03 ==	serviços  =>			logica03 ==	serviços	  <=    logica03 ==	serviços	
+					
+}                                                         }    

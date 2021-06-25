@@ -1,6 +1,7 @@
 .header {
   display: flex;
   align-items: center;
+  background-color: rgb(175, 235, 215);
 }
 .header a{
   display: flex;
@@ -14,5 +15,5 @@
   padding-left: 25px;
 }
 .header .title-group i{
-  padding-right: 25px;
+  padding-right: 10px;
 }
