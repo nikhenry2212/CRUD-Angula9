@@ -10,6 +10,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 
 import { RedDirective } from './directives/red.directive';
 
@@ -40,7 +41,8 @@ import { ProductCreateComponent } from './components/product/product-create/prod
     MatToolbarModule,// components de style
     MatSidenavModule,// components de style
     MatListModule,// components de style
-    MatCardModule
+    MatCardModule,// components de style
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
