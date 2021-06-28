@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';// import com dependencias para fazer req http
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -44,7 +45,8 @@ import { ProductCreateComponent } from './components/product/product-create/prod
     MatListModule,// components de style
     MatCardModule,// components de style
     MatButtonModule,// components de style
-    MatSnackBarModule // components de style msg de confirmação
+    MatSnackBarModule, // components de style msg de confirmação
+    HttpClientModule // import de métodos para fazer requisicoes http
   ],
   providers: [],
   bootstrap: [AppComponent]
