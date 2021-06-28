@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';// import com dependencias para fazer req http
+import {FormsModule} from '@angular/forms'; //import pára fazer formulario
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 import { RedDirective } from './directives/red.directive';
 
@@ -46,7 +49,11 @@ import { ProductCreateComponent } from './components/product/product-create/prod
     MatCardModule,// components de style
     MatButtonModule,// components de style
     MatSnackBarModule, // components de style msg de confirmação
-    HttpClientModule // import de métodos para fazer requisicoes http
+    HttpClientModule, // import de métodos para fazer requisicoes http
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,22 @@
-<p>product-create works</p>
-<!-- event binding com função para navegar para aparecer snackBar com msg de sucesso -->
-<button mat-raised-button (click)="createProduct()" color="primary">
-  Salvar
-</button>
-<!-- event binding para cancelar novo produto -->
-<button mat-raised-button (click)="cancel()" color="warning">
-  Cancelar
-</button>
+<mat-card>
+  <mat-card-title>Novo Produto</mat-card-title>
+  <form>
+    <mat-form-field>
+      <!-- two way data-binding ngMOdel ao nome da variavel q vem do TS-->
+      <input matInput placeholder="Nome" [(ngModel)]="product.name" name="name">
+    </mat-form-field>
+    <mat-form-field>
+      <!-- two way data-binding ngMOdel ao price da variavel q vem do TS-->
+      <input matInput placeholder="Preço (R$)" [(ngModel)]="product.price" name="price">
+    </mat-form-field>
+  </form>
+
+  <!-- event binding com função para navegar para aparecer snackBar com msg de sucesso -->
+  <button mat-raised-button (click)="createProduct()" color="primary">
+    Salvar
+  </button>
+  <!-- event binding para cancelar novo produto -->
+  <button class="buttonCancelar" mat-raised-button (click)="cancel()">
+    Cancelar
+  </button>
+</mat-card>
