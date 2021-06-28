@@ -36,4 +36,9 @@ export class ProductService {
     //req via post passando o modelo de Product com url  e o product
     return this.http.post<Product>(this.baseUrl, product)
   }
+  //Método de ler q está sendo acessado no product-read.ts
+  //Método q acessa a api retornando um Observable de Array de Product
+  read(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.baseUrl)   
+  }
 }
