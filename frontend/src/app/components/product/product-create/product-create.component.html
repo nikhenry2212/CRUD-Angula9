@@ -1,1 +1,9 @@
-<p>product-create works!</p>
+<p>product-create works</p>
+<!-- event binding com função para navegar para aparecer snackBar com msg de sucesso -->
+<button mat-raised-button (click)="createProduct()" color="primary">
+  Salvar
+</button>
+<!-- event binding para cancelar novo produto -->
+<button mat-raised-button (click)="cancel()" color="warning">
+  Cancelar
+</button>
