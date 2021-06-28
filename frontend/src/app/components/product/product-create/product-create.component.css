@@ -1,0 +1,12 @@
+form{
+  display: flex;
+  flex-direction: column;
+}
+button{
+  margin-right: 15px;
+  margin-top: 15px;
+}
+.buttonCancelar{
+  color: white;
+  background-color: #d32f2f;
+}
