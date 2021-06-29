@@ -39,6 +39,15 @@ export class ProductService {
   //Método de ler q está sendo acessado no product-read.ts
   //Método q acessa a api retornando um Observable de Array de Product
   read(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.baseUrl)   
+    return this.http.get<Product[]>(this.baseUrl)
+  }
+  readById(id: string): Observable<Product> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<Product>(url)
+  }
+  //Método para atualizar 
+  update(product: Product): Observable<Product> {
+    const url = `${this.baseUrl}/${product.id}`;
+    return this.http.put<Product>(url, product)
   }
 }
