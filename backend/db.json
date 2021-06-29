@@ -1,24 +1,14 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Caneta",
-      "price": 5.89
-    },
-    {
       "id": 2,
       "name": "Macbook Pro i9 32Gb ram",
       "price": "18000.89"
     },
     {
-      "id": 3,
-      "name": "Samsung S20",
-      "price": 5000.89
-    },
-    {
-      "name": "Xbox ONE",
-      "price": "3500.99",
-      "id": 4
+      "name": "Dell i5 16Gbram SSD500Gb",
+      "price": "7000.00",
+      "id": 3
     }
   ]
 }

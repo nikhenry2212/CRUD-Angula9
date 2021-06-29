@@ -1,3 +1,4 @@
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -22,7 +23,11 @@ const routes: Routes = [{
   //Rota para atualizar component Produto
   path: 'products/update/:id',
   component: ProductUpdateComponent,
-},];
+},{
+  //Rota para excluir component Produto
+  path: 'products/delete/:id',
+  component: ProductDeleteComponent,
+}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

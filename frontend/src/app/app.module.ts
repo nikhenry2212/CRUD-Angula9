@@ -32,10 +32,11 @@ import { ForDirective } from './directives/for.directive';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
 import { ProductRead2Component } from './components/product/product-read2/product-read2.component';
+import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component'; // função q registra a linguagem 
 
 import localePt from '@angular/common/locales/pt'; //adiciona a linguagem da formatação
 import {registerLocaleData} from '@angular/common';
-import { ProductUpdateComponent } from './components/product/product-update/product-update.component'; // função q registra a linguagem 
 
 registerLocaleData(localePt)//Método para registrar
 @NgModule({
@@ -51,7 +52,8 @@ registerLocaleData(localePt)//Método para registrar
     ProductCreateComponent,
     ProductReadComponent,
     ProductRead2Component,
-    ProductUpdateComponent
+    ProductUpdateComponent,
+    ProductDeleteComponent
   ],
   imports: [
     BrowserModule,
