@@ -11,6 +11,8 @@ import { ProductService } from '../product.service';
 export class ProductReadComponent implements OnInit {
   // Que tem os produtos
   products: Product[]
+  //Associa com a tabela ,para inserção de qutde de colunas
+  displayedColumns = ['id', 'name', 'price']
 
   //Injetou o ProductService para conseguir acessar o serviços que vem da api
   constructor(private productService: ProductService) { }

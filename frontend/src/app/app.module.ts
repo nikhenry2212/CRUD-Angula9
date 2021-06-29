@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';//LOCALE_ID = para o angular entender a localização
 import { HttpClientModule } from '@angular/common/http';// import com dependencias para fazer req http
 import {FormsModule} from '@angular/forms'; //import pára fazer formulario
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +33,10 @@ import { ProductCreateComponent } from './components/product/product-create/prod
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
 import { ProductRead2Component } from './components/product/product-read2/product-read2.component';
 
+import localePt from '@angular/common/locales/pt'; //adiciona a linguagem da formatação
+import {registerLocaleData} from '@angular/common'; // função q registra a linguagem 
+
+registerLocaleData(localePt)//Método para registrar
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,7 +70,10 @@ import { ProductRead2Component } from './components/product/product-read2/produc
     MatSortModule,
 
   ],
-  providers: [],
+  providers: [{
+    provide: LOCALE_ID,//declara o locale_id como provide
+    useValue:'pt-BR' // e o valor de linguagem q ele suporta
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
