@@ -2,3 +2,13 @@ table{
   width: 100%;
 }
 /* tamanho da tabela */
+.edit{
+  margin-right: 10px;
+}
+.edit > i{
+  color: #69b4b4;
+}
+.delete > i{
+  color: #d16a6a;
+
+}
