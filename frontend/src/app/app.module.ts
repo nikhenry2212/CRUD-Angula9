@@ -34,7 +34,8 @@ import { ProductReadComponent } from './components/product/product-read/product-
 import { ProductRead2Component } from './components/product/product-read2/product-read2.component';
 
 import localePt from '@angular/common/locales/pt'; //adiciona a linguagem da formatação
-import {registerLocaleData} from '@angular/common'; // função q registra a linguagem 
+import {registerLocaleData} from '@angular/common';
+import { ProductUpdateComponent } from './components/product/product-update/product-update.component'; // função q registra a linguagem 
 
 registerLocaleData(localePt)//Método para registrar
 @NgModule({
@@ -49,7 +50,8 @@ registerLocaleData(localePt)//Método para registrar
     ForDirective,
     ProductCreateComponent,
     ProductReadComponent,
-    ProductRead2Component
+    ProductRead2Component,
+    ProductUpdateComponent
   ],
   imports: [
     BrowserModule,
