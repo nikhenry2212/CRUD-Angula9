@@ -18,8 +18,9 @@ export class ProductUpdateComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    // + = conversão de string para number
     //inicializar ja com os dados no component
-    const id = this.route.snapshot.paramMap.get('id');
+    const id = +this.route.snapshot.paramMap.get('id');
     this.productService.readById(id).subscribe(product => {
       this.product = product;
     })

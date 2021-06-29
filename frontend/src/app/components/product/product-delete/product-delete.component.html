@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-title>Excluir Produto</mat-card-title>
+  <form>
+    <mat-form-field>
+      <!-- property-binding value ao nome da variavel q vem do TS-->
+      <input matInput placeholder="Nome" [value]="product.name" name="name" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <!--  property-binding value ao price da variavel q vem do TS-->
+      <input matInput placeholder="Preço (R$)" [value]="product.price" name="price" disabled>
+    </mat-form-field>
+  </form>
+
+  <!-- event binding com função para navegar para aparecer snackBar com msg de sucesso -->
+  <button mat-raised-button (click)="deleteProduct()" color="warn">
+   Excluir
+  </button>
+  <!-- event binding para cancelar novo produto -->
+  <button class="buttonCancelar" mat-raised-button (click)="cancel()" color="primary">
+    Cancelar
+  </button>
+</mat-card>
