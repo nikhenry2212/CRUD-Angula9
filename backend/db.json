@@ -9,6 +9,26 @@
       "name": "Dell i5 16Gbram SSD500Gb",
       "price": "7000.00",
       "id": 3
+    },
+    {
+      "name": "epa",
+      "price": "123",
+      "id": 4
+    },
+    {
+      "name": "Ceel",
+      "price": "123245",
+      "id": 5
+    },
+    {
+      "name": "novo",
+      "price": "2223",
+      "id": 6
+    },
+    {
+      "name": "teste",
+      "price": "1250",
+      "id": 7
     }
   ]
 }
